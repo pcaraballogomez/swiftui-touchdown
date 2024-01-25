@@ -15,6 +15,7 @@
 		F21C85772B62EEEA007063AB /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = F21C85732B62EEE9007063AB /* category.json */; };
 		F21C85782B62EEEA007063AB /* brand.json in Resources */ = {isa = PBXBuildFile; fileRef = F21C85742B62EEEA007063AB /* brand.json */; };
 		F21C85792B62EEEA007063AB /* product.json in Resources */ = {isa = PBXBuildFile; fileRef = F21C85752B62EEEA007063AB /* product.json */; };
+		F21C85832B62F0E4007063AB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85822B62F0E4007063AB /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +28,8 @@
 		F21C85732B62EEE9007063AB /* category.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 		F21C85742B62EEEA007063AB /* brand.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = brand.json; sourceTree = "<group>"; };
 		F21C85752B62EEEA007063AB /* product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = product.json; sourceTree = "<group>"; };
-		F21C857A2B62EF25007063AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F21C857A2B62EF25007063AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21C85822B62F0E4007063AB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,8 @@
 			isa = PBXGroup;
 			children = (
 				F21C85622B62EE0E007063AB /* Touchdown */,
+				F21C85672B62EE10007063AB /* Assets.xcassets */,
+				F21C857A2B62EF25007063AB /* Info.plist */,
 				F21C85612B62EE0E007063AB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,12 +64,13 @@
 		F21C85622B62EE0E007063AB /* Touchdown */ = {
 			isa = PBXGroup;
 			children = (
-				F21C857A2B62EF25007063AB /* Info.plist */,
+				F21C857B2B62F005007063AB /* App */,
 				F21C85712B62EED0007063AB /* Data */,
-				F21C85632B62EE0E007063AB /* TouchdownApp.swift */,
-				F21C85652B62EE0E007063AB /* ContentView.swift */,
-				F21C85672B62EE10007063AB /* Assets.xcassets */,
+				F21C85802B62F0A8007063AB /* Extension */,
+				F21C857F2B62F0A3007063AB /* Model */,
 				F21C85692B62EE10007063AB /* Preview Content */,
+				F21C85812B62F0AD007063AB /* Utility */,
+				F21C857C2B62F011007063AB /* View */,
 			);
 			path = Touchdown;
 			sourceTree = "<group>";
@@ -87,6 +92,60 @@
 				F21C85752B62EEEA007063AB /* product.json */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		F21C857B2B62F005007063AB /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F21C85632B62EE0E007063AB /* TouchdownApp.swift */,
+				F21C85652B62EE0E007063AB /* ContentView.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F21C857C2B62F011007063AB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F21C857D2B62F03C007063AB /* Home */,
+				F21C857E2B62F099007063AB /* Detail */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F21C857D2B62F03C007063AB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		F21C857E2B62F099007063AB /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		F21C857F2B62F0A3007063AB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F21C85802B62F0A8007063AB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F21C85812B62F0AD007063AB /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F21C85822B62F0E4007063AB /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +224,7 @@
 			files = (
 				F21C85662B62EE0E007063AB /* ContentView.swift in Sources */,
 				F21C85642B62EE0E007063AB /* TouchdownApp.swift in Sources */,
+				F21C85832B62F0E4007063AB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
