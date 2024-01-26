@@ -8,12 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+
     // MARK: - Properties
 
     // MARK: - Body
     var body: some View {
-        FooterView()
-            .padding(.horizontal)
+        VStack {
+            NavigationBarView()
+                .padding()
+                .background(Color.white)
+                .shadow(color: .black.opacity(0.05),
+                        radius: 5,
+                        x: .zero,
+                        y: 5)
+
+            Spacer()
+
+            FooterView()
+                .padding(.horizontal)
+        } //: VStack
+        .background(Resources.Colors.colorBackground.ignoresSafeArea())
     }
 }
 

@@ -9,9 +9,4 @@ import SwiftUI
 
 struct Constanst {
 
-    // MARK: - Color
-    struct Colors {
-        static let colorBackground = Color("ColorBackground")
-        static let colorGray = Color(UIColor.systemGray4)
-    }
 }
