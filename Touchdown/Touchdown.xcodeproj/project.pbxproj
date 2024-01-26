@@ -23,6 +23,9 @@
 		F21C858E2B638797007063AB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C858D2B638797007063AB /* Images.swift */; };
 		F21C85902B6387A0007063AB /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C858F2B6387A0007063AB /* Strings.swift */; };
 		F21C85922B6387A7007063AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85912B6387A7007063AB /* Colors.swift */; };
+		F21C85942B63DC56007063AB /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85932B63DC56007063AB /* PlayerModel.swift */; };
+		F21C85962B63DC81007063AB /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85952B63DC81007063AB /* CodableBundleExtension.swift */; };
+		F21C85982B63DCC4007063AB /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85972B63DCC4007063AB /* FileHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		F21C858D2B638797007063AB /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		F21C858F2B6387A0007063AB /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		F21C85912B6387A7007063AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		F21C85932B63DC56007063AB /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		F21C85952B63DC81007063AB /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
+		F21C85972B63DCC4007063AB /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 		F21C857F2B62F0A3007063AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F21C85932B63DC56007063AB /* PlayerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +161,7 @@
 		F21C85802B62F0A8007063AB /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				F21C85952B63DC81007063AB /* CodableBundleExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -162,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				F21C85822B62F0E4007063AB /* Constants.swift */,
+				F21C85972B63DCC4007063AB /* FileHelper.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -252,12 +261,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21C85662B62EE0E007063AB /* ContentView.swift in Sources */,
+				F21C85942B63DC56007063AB /* PlayerModel.swift in Sources */,
 				F21C85922B6387A7007063AB /* Colors.swift in Sources */,
 				F21C85902B6387A0007063AB /* Strings.swift in Sources */,
+				F21C85982B63DCC4007063AB /* FileHelper.swift in Sources */,
 				F21C85892B638579007063AB /* LogoView.swift in Sources */,
 				F21C858B2B6386C8007063AB /* Resources.swift in Sources */,
 				F21C85852B62F22B007063AB /* FooterView.swift in Sources */,
 				F21C85642B62EE0E007063AB /* TouchdownApp.swift in Sources */,
+				F21C85962B63DC81007063AB /* CodableBundleExtension.swift in Sources */,
 				F21C858E2B638797007063AB /* Images.swift in Sources */,
 				F21C85832B62F0E4007063AB /* Constants.swift in Sources */,
 				F21C85872B63848F007063AB /* NavigationBarView.swift in Sources */,
