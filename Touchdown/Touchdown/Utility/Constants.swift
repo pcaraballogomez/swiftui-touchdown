@@ -8,5 +8,8 @@
 import SwiftUI
 
 struct Constanst {
-    static let players: [Player] = decode(.player)
+    
+    struct Data {
+        static let players: [Player] = decode(.player)
+    }
 }

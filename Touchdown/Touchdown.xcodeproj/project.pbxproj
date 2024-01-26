@@ -26,6 +26,8 @@
 		F21C85942B63DC56007063AB /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85932B63DC56007063AB /* PlayerModel.swift */; };
 		F21C85962B63DC81007063AB /* CodableBundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85952B63DC81007063AB /* CodableBundleExtension.swift */; };
 		F21C85982B63DCC4007063AB /* FileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85972B63DCC4007063AB /* FileHelper.swift */; };
+		F21C859A2B63DE02007063AB /* FeaturedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85992B63DE02007063AB /* FeaturedItemView.swift */; };
+		F21C859C2B63E36D007063AB /* FeaturedTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C859B2B63E36D007063AB /* FeaturedTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		F21C85932B63DC56007063AB /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
 		F21C85952B63DC81007063AB /* CodableBundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableBundleExtension.swift; sourceTree = "<group>"; };
 		F21C85972B63DCC4007063AB /* FileHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHelper.swift; sourceTree = "<group>"; };
+		F21C85992B63DE02007063AB /* FeaturedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemView.swift; sourceTree = "<group>"; };
+		F21C859B2B63E36D007063AB /* FeaturedTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +143,8 @@
 				F21C85842B62F22B007063AB /* FooterView.swift */,
 				F21C85862B63848F007063AB /* NavigationBarView.swift */,
 				F21C85882B638579007063AB /* LogoView.swift */,
+				F21C85992B63DE02007063AB /* FeaturedItemView.swift */,
+				F21C859B2B63E36D007063AB /* FeaturedTabView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -263,6 +269,7 @@
 				F21C85662B62EE0E007063AB /* ContentView.swift in Sources */,
 				F21C85942B63DC56007063AB /* PlayerModel.swift in Sources */,
 				F21C85922B6387A7007063AB /* Colors.swift in Sources */,
+				F21C859C2B63E36D007063AB /* FeaturedTabView.swift in Sources */,
 				F21C85902B6387A0007063AB /* Strings.swift in Sources */,
 				F21C85982B63DCC4007063AB /* FileHelper.swift in Sources */,
 				F21C85892B638579007063AB /* LogoView.swift in Sources */,
@@ -271,6 +278,7 @@
 				F21C85642B62EE0E007063AB /* TouchdownApp.swift in Sources */,
 				F21C85962B63DC81007063AB /* CodableBundleExtension.swift in Sources */,
 				F21C858E2B638797007063AB /* Images.swift in Sources */,
+				F21C859A2B63DE02007063AB /* FeaturedItemView.swift in Sources */,
 				F21C85832B62F0E4007063AB /* Constants.swift in Sources */,
 				F21C85872B63848F007063AB /* NavigationBarView.swift in Sources */,
 			);

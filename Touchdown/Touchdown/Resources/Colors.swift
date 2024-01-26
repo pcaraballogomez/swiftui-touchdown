@@ -9,6 +9,11 @@ import SwiftUI
 
 extension Resources.Colors {
 
-    static let colorBackground = Color("ColorBackground")
-    static let colorGray = Color(UIColor.systemGray4)
+    static let background = Color("ColorBackground")
+
+    struct Home {
+        static let navBarTextColor = Color.black
+        static let logoTextColor = Color.black
+        static let footerTextColor = Color.gray
+    }
 }

@@ -22,12 +22,18 @@ struct ContentView: View {
                         x: .zero,
                         y: 5)
 
-            Spacer()
-
-            FooterView()
-                .padding(.horizontal)
+            ScrollView(showsIndicators: false) {
+                VStack {
+                    FeaturedTabView()
+                        .padding(.vertical, 20)
+                        .frame(height: UIScreen.main.bounds.width / 1.475)
+                    
+                    FooterView()
+                        .padding(.horizontal)
+                } //: VStack
+            } //: ScrollView
         } //: VStack
-        .background(Resources.Colors.colorBackground.ignoresSafeArea())
+        .background(Resources.Colors.background.ignoresSafeArea())
     }
 }
 
