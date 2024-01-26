@@ -20,7 +20,7 @@ struct NavigationBarView: View {
             } label: {
                 Image(systemName: "magnifyingglass")
                     .font(.title)
-                    .foregroundColor(.black)
+                    .foregroundColor(Resources.Colors.Home.navBarTextColor)
             } //: Button
 
             Spacer()
@@ -42,7 +42,7 @@ struct NavigationBarView: View {
                 } label: {
                     Image(systemName: "cart")
                         .font(.title)
-                        .foregroundColor(.black)
+                        .foregroundColor(Resources.Colors.Home.navBarTextColor)
                 } //: Button
 
                 Circle()

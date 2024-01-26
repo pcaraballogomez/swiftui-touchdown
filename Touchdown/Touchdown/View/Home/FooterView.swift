@@ -13,19 +13,19 @@ struct FooterView: View {
     var body: some View {
         VStack(spacing: 10) {
             Text(Resources.Strings.Footer.text)
-                .foregroundColor(.gray)
+                .foregroundColor(Resources.Colors.footerText)
                 .multilineTextAlignment(.center)
                 .layoutPriority(2)
 
             Image(Resources.Images.Logo.lineal)
                 .renderingMode(.template)
-                .foregroundColor(.gray)
+                .foregroundColor(Resources.Colors.footerText)
                 .layoutPriority(0)
 
             Text(Resources.Strings.Footer.copyright)
                 .font(.footnote)
                 .fontWeight(.bold)
-                .foregroundColor(.gray)
+                .foregroundColor(Resources.Colors.footerText)
                 .multilineTextAlignment(.center)
                 .layoutPriority(1)
         } //: VStack
@@ -33,12 +33,11 @@ struct FooterView: View {
     }
 }
 
-
 // MARK: - Preview
 struct FooterView_Previews: PreviewProvider {
     static var previews: some View {
         FooterView()
             .previewLayout(.sizeThatFits)
-            .background(Resources.Colors.colorBackground)
+            .background(Resources.Colors.background)
     }
 }

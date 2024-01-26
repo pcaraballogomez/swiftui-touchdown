@@ -15,7 +15,7 @@ struct LogoView: View {
             Text("Touch".uppercased())
                 .font(.title3)
                 .fontWeight(.black)
-                .foregroundColor(.black)
+                .foregroundColor(Resources.Colors.Home.logoTextColor)
 
             Image(Resources.Images.Logo.dark)
                 .resizable()
@@ -25,7 +25,7 @@ struct LogoView: View {
             Text("Down".uppercased())
                 .font(.title3)
                 .fontWeight(.black)
-                .foregroundColor(.black)
+                .foregroundColor(Resources.Colors.Home.logoTextColor)
         } //: HStack
     }
 }
