@@ -9,6 +9,11 @@ import Foundation
 
 extension Resources.Strings {
 
+    struct Logo {
+        static let text1 = "Touch"
+        static let text2 = "Down"
+    }
+
     struct Footer {
         static let text = "We offer the most cutting edge, comfortable, lightweight and durable footbal helmets in the market at affordable prices."
         static let copyright = "Copyright © Pablo Caraballo\nAll rights reserved"

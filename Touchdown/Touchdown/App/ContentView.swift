@@ -10,13 +10,17 @@ import SwiftUI
 struct ContentView: View {
 
     // MARK: - Properties
+    private struct VisualConstants {
+        static let featuredTabViewVerticalPadding = 20.0
+        static let featuredTabViewAspectRatio = 1.475
+    }
 
     // MARK: - Body
     var body: some View {
         VStack {
             NavigationBarView()
                 .padding()
-                .background(Color.white)
+                .background(Resources.Colors.navBarBackgroundColor)
                 .shadow(color: .black.opacity(0.05),
                         radius: 5,
                         x: .zero,
@@ -25,8 +29,9 @@ struct ContentView: View {
             ScrollView(showsIndicators: false) {
                 VStack {
                     FeaturedTabView()
-                        .padding(.vertical, 20)
-                        .frame(height: UIScreen.main.bounds.width / 1.475)
+                        .padding(.vertical,
+                                 VisualConstants.featuredTabViewVerticalPadding)
+                        .frame(height: UIScreen.main.bounds.width / VisualConstants.featuredTabViewAspectRatio)
                     
                     FooterView()
                         .padding(.horizontal)

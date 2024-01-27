@@ -12,22 +12,30 @@ struct NavigationBarView: View {
     // MARK: - Properties
     @State private var isAnimated = false
 
+    private struct VisualConstants {
+        static let logoAnimationOffset = -25.0
+        static let circleSize = 14.0
+        static let circleXOffset = 13.0
+        static let circleYOffset = -10.0
+    }
+
     // MARK: - Body
     var body: some View {
         HStack {
             Button {
 
             } label: {
-                Image(systemName: "magnifyingglass")
+                Image(systemName: Constanst.SystemIconName.magnifyingglass)
                     .font(.title)
-                    .foregroundColor(Resources.Colors.Home.navBarTextColor)
+                    .foregroundColor(Resources.Colors.navBarTextColor)
             } //: Button
 
             Spacer()
 
             LogoView()
                 .opacity(isAnimated ? 1 : .zero)
-                .offset(x: .zero, y: isAnimated ? .zero : -25)
+                .offset(x: .zero,
+                        y: isAnimated ? .zero : VisualConstants.logoAnimationOffset)
                 .onAppear {
                     withAnimation(.easeOut(duration: 0.5)) {
                         isAnimated.toggle()
@@ -40,15 +48,17 @@ struct NavigationBarView: View {
                 Button {
 
                 } label: {
-                    Image(systemName: "cart")
+                    Image(systemName: Constanst.SystemIconName.cart)
                         .font(.title)
-                        .foregroundColor(Resources.Colors.Home.navBarTextColor)
+                        .foregroundColor(Resources.Colors.navBarTextColor)
                 } //: Button
 
                 Circle()
                     .fill(.red)
-                    .frame(width: 14, height: 14)
-                    .offset(x: 13, y: -10)
+                    .frame(width: VisualConstants.circleSize,
+                           height: VisualConstants.circleSize)
+                    .offset(x: VisualConstants.circleXOffset,
+                            y: VisualConstants.circleYOffset)
             } //: ZStack
 
         } //: HStack

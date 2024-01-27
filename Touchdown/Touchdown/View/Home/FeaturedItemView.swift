@@ -10,6 +10,9 @@ import SwiftUI
 struct FeaturedItemView: View {
 
     // MARK: - Properties
+    private struct VisualConstants {
+        static let cornerRadius = 12.0
+    }
     let player: Player
 
     // MARK: - Body
@@ -17,7 +20,7 @@ struct FeaturedItemView: View {
         Image(player.image)
             .resizable()
             .scaledToFit()
-            .cornerRadius(12)
+            .cornerRadius(VisualConstants.cornerRadius)
     }
 }
 

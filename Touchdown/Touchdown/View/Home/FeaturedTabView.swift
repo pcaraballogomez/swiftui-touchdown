@@ -9,13 +9,21 @@ import SwiftUI
 
 struct FeaturedTabView: View {
 
+    // MARK: - Properties
+    private struct VisualConstants {
+        static let featuredItemViewTopPadding = 10.0
+        static let featuredItemViewHorizontalPadding = 15.0
+    }
+
     // MARK: - Body
     var body: some View {
         TabView {
             ForEach(Constanst.Data.players) { player in
                 FeaturedItemView(player: player)
-                    .padding(.top, 10)
-                    .padding(.horizontal, 15)
+                    .padding(.top,
+                             VisualConstants.featuredItemViewTopPadding)
+                    .padding(.horizontal,
+                             VisualConstants.featuredItemViewHorizontalPadding)
             }
         } //: TabView
         .tabViewStyle(.page(indexDisplayMode: .always))

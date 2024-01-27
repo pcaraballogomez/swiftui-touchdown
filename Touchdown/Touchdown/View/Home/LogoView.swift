@@ -9,23 +9,30 @@ import SwiftUI
 
 struct LogoView: View {
 
+    // MARK: - Properties
+    private struct VisualConstants {
+        static let itemSpacing = 4.0
+        static let logoSize = 30.0
+    }
+
     // MARK: - Body
     var body: some View {
-        HStack(spacing: 4) {
-            Text("Touch".uppercased())
+        HStack(spacing: VisualConstants.itemSpacing) {
+            Text(Resources.Strings.Logo.text1.uppercased())
                 .font(.title3)
                 .fontWeight(.black)
-                .foregroundColor(Resources.Colors.Home.logoTextColor)
+                .foregroundColor(Resources.Colors.logoTextColor)
 
             Image(Resources.Images.Logo.dark)
                 .resizable()
                 .scaledToFit()
-                .frame(width: 30, height: 30)
+                .frame(width: VisualConstants.logoSize,
+                       height: VisualConstants.logoSize)
 
-            Text("Down".uppercased())
+            Text(Resources.Strings.Logo.text1.uppercased())
                 .font(.title3)
                 .fontWeight(.black)
-                .foregroundColor(Resources.Colors.Home.logoTextColor)
+                .foregroundColor(Resources.Colors.logoTextColor)
         } //: HStack
     }
 }
