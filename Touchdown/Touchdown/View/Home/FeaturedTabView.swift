@@ -34,6 +34,6 @@ struct FeaturedTabView: View {
 struct FeaturedTabView_Previews: PreviewProvider {
     static var previews: some View {
         FeaturedTabView()
-            .background(Resources.Colors.background)
+            .background(Resources.Colors.Background.primaryColor)
     }
 }

@@ -9,12 +9,14 @@ import SwiftUI
 
 extension Resources.Colors {
 
-    static let background = Color("ColorBackground")
+    struct Background {
+        static let primaryColor = Color("ColorBackground")
+        static let navBarBackgroundColor = Color.white
+    }
 
-    // FIXME: Refactor
-    static let logoTextColor = Color.black
-    static let footerTextColor = Color.gray
-    static let navBarBackgroundColor = Color.white
-    static let navBarTextColor = Color.black
-    static let categoryItemTextColor = Color.gray
+    struct Text {
+        static let primaryColor = Color.gray
+        static let navBarTextColor = Color.black
+        static let logoTextColor = Color.black
+    }
 }

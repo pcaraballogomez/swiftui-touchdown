@@ -20,7 +20,7 @@ struct ContentView: View {
         VStack {
             NavigationBarView()
                 .padding()
-                .background(Resources.Colors.navBarBackgroundColor)
+                .background(Resources.Colors.Background.navBarBackgroundColor)
                 .shadow(color: .black.opacity(0.05),
                         radius: 5,
                         x: .zero,
@@ -38,7 +38,7 @@ struct ContentView: View {
                 } //: VStack
             } //: ScrollView
         } //: VStack
-        .background(Resources.Colors.background.ignoresSafeArea())
+        .background(Resources.Colors.Background.primaryColor.ignoresSafeArea())
     }
 }
 
