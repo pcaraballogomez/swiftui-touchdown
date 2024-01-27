@@ -20,7 +20,7 @@ struct ContentView: View {
         VStack {
             NavigationBarView()
                 .padding()
-                .background(Resources.Colors.Background.navBarBackgroundColor)
+                .background(Resources.Colors.Background.secondaryColor)
                 .shadow(color: .black.opacity(0.05),
                         radius: 5,
                         x: .zero,
@@ -32,13 +32,18 @@ struct ContentView: View {
                         .padding(.vertical,
                                  VisualConstants.featuredTabViewVerticalPadding)
                         .frame(height: UIScreen.main.bounds.width / VisualConstants.featuredTabViewAspectRatio)
+
+                    CategoryGridView()
                     
                     FooterView()
                         .padding(.horizontal)
                 } //: VStack
             } //: ScrollView
         } //: VStack
-        .background(Resources.Colors.Background.primaryColor.ignoresSafeArea())
+        .background(
+            Resources.Colors.Background.primaryColor
+                .ignoresSafeArea()
+        )
     }
 }
 

@@ -11,7 +11,8 @@ extension Resources.Colors {
 
     struct Background {
         static let primaryColor = Color("ColorBackground")
-        static let navBarBackgroundColor = Color.white
+        static let secondaryColor = Color.white
+        static let tertiaryColor = Color(UIColor.systemGray4)
     }
 
     struct Text {
