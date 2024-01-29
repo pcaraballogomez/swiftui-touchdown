@@ -13,6 +13,7 @@ struct Constanst {
     struct Data {
         static let categories: [Category] = decode(.category)
         static let players: [Player] = decode(.player)
+        static let products: [Product] = decode(.product)
     }
 
     // MARK: - Layout

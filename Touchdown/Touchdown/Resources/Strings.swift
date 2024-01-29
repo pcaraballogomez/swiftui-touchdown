@@ -16,6 +16,7 @@ extension Resources.Strings {
 
     struct Category {
         static let title = "Category"
+        static let helmetCategory = "Helmets"
     }
 
     struct Footer {

@@ -13,7 +13,15 @@ struct ContentView: View {
     private struct VisualConstants {
         static let featuredTabViewVerticalPadding = 20.0
         static let featuredTabViewAspectRatio = 1.475
+        static let productGridVerticalSpacing = 15.0
+        static let productGridPadding = 15.0
     }
+
+    private var gridLayout: [GridItem] = {
+        Array(repeating: GridItem(.flexible(),
+                                  spacing: Constanst.Layout.rowSpacing),
+              count: 2)
+    }()
 
     // MARK: - Body
     var body: some View {
@@ -34,6 +42,16 @@ struct ContentView: View {
                         .frame(height: UIScreen.main.bounds.width / VisualConstants.featuredTabViewAspectRatio)
 
                     CategoryGridView()
+
+                    TitleView(title: Resources.Strings.Category.helmetCategory)
+
+                    LazyVGrid(columns: gridLayout,
+                              spacing: VisualConstants.productGridVerticalSpacing) {
+                        ForEach(Constanst.Data.products) { product in
+                            ProductItemView(product: product)
+                        } //: ForEach
+                    } //: LazyVGrid
+                    .padding(VisualConstants.productGridPadding)
                     
                     FooterView()
                         .padding(.horizontal)
