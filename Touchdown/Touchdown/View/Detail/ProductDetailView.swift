@@ -14,34 +14,65 @@ struct ProductDetailView: View {
 
     private struct VisualConstants {
         static let verticalSpacing = 5.0
+        static let ratingSizesViewTopPadding = -15.0
+        static let ratingSizesViewBottomPadding = 10.0
+        static let detailBottomPartTopPadding = -105.0
     }
 
     // MARK: - Body
     var body: some View {
-        VStack(alignment: .leading,
-               spacing: VisualConstants.verticalSpacing) {
+        GeometryReader { geometry in
+            VStack(alignment: .leading,
+                   spacing: VisualConstants.verticalSpacing) {
 
-            // Navbar
-            DetailNavigationBar()
+                // Navbar
+                DetailNavigationBar()
+                    .padding(.horizontal)
+                    .padding(.top, geometry.safeAreaInsets.top)
+
+                // Header
+                DetailHeaderView(header: Resources.Strings.Detail.header,
+                                 title: product.name)
+                    .padding(.horizontal)
+
+                // Detail top part
+                DetailTopPartView(title: Resources.Strings.Detail.priceTitle,
+                                  text: product.formattedPrice,
+                                  image: product.image)
+                    .padding(.horizontal)
+                    .zIndex(1)
+
+                // Detail bottom part
+                VStack {
+                    // Ratings + Sizes
+                    DetailRatingSizesView()
+                        .padding(.top, VisualConstants.ratingSizesViewTopPadding)
+                        .padding(.bottom, VisualConstants.ratingSizesViewBottomPadding)
+
+                    // Description
+                    ScrollView(showsIndicators: false) {
+                        Text(product.description)
+                            .font(.system(.body, design: .rounded))
+                            .foregroundColor(Resources.Colors.Text.primaryColor)
+                    } //: ScrollView
+
+                    // Quantity + Favourite
+
+                    // Add to cart
+                    Spacer()
+                } //: VStack - Detail bottom part
                 .padding(.horizontal)
-                .padding(.top, UIApplication.shared.keyWindow?.safeAreaInsets.top)
-
-            // Header
-            Text(product.name)
-            // Detail top part
-
-            // Detail bottom part
-
-            // Ratings + Sizes
-
-            // Quantity + Favourite
-
-            // Add to cart
-            Spacer()
-        } //: VStack
-        .ignoresSafeArea()
-        .background(product.backgroundColor)
-        .ignoresSafeArea()
+                .background(
+                    Resources.Colors.Background.secondaryColor
+                        .clipShape(CustomShape())
+                        .padding(.top, VisualConstants.detailBottomPartTopPadding)
+                )
+            } //: VStack
+            .zIndex(0)
+            .ignoresSafeArea()
+            .background(product.backgroundColor)
+            .ignoresSafeArea()
+        } //: GeometryReader
     }
 }
 

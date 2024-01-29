@@ -24,4 +24,11 @@ extension Resources.Strings {
         static let text = "We offer the most cutting edge, comfortable, lightweight and durable footbal helmets in the market at affordable prices."
         static let copyright = "Copyright © Pablo Caraballo\nAll rights reserved"
     }
+
+    struct Detail {
+        static let header = "Protective Gear"
+        static let priceTitle = "Price"
+        static let ratingTitle = "Ratings"
+        static let sizeTitle = "Sizes"
+    }
 }

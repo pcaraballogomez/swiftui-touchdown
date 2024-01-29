@@ -13,6 +13,7 @@ struct NavigationBarView: View {
     @State private var isAnimated = false
 
     private struct VisualConstants {
+        static let logoAnimationDuration = 0.5
         static let logoAnimationOffset = -25.0
         static let circleSize = 14.0
         static let circleXOffset = 13.0
@@ -37,7 +38,7 @@ struct NavigationBarView: View {
                 .offset(x: .zero,
                         y: isAnimated ? .zero : VisualConstants.logoAnimationOffset)
                 .onAppear {
-                    withAnimation(.easeOut(duration: 0.5)) {
+                    withAnimation(.easeOut(duration: VisualConstants.logoAnimationDuration)) {
                         isAnimated.toggle()
                     }
                 }

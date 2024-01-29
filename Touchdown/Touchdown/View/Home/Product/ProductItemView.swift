@@ -34,7 +34,7 @@ struct ProductItemView: View {
                 .font(.title3)
                 .fontWeight(.black)
 
-            Text("$\(product.price)")
+            Text(product.formattedPrice)
                 .fontWeight(.semibold)
                 .foregroundColor(Resources.Colors.Text.primaryColor)
         } //: VStack
