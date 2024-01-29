@@ -28,6 +28,7 @@ struct Constanst {
     // MARK: - SystemIconName
     struct SystemIconName {
         static let cart = "cart"
-        static let magnifyingglass = "magnifyingglass"
+        static let magnifyingGlass = "magnifyingglass"
+        static let chevronLeft = "chevron.left"
     }
 }

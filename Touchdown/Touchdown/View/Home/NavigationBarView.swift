@@ -25,9 +25,9 @@ struct NavigationBarView: View {
             Button {
 
             } label: {
-                Image(systemName: Constanst.SystemIconName.magnifyingglass)
+                Image(systemName: Constanst.SystemIconName.magnifyingGlass)
                     .font(.title)
-                    .foregroundColor(Resources.Colors.Text.navBarTextColor)
+                    .foregroundColor(Resources.Colors.Text.secondaryColor)
             } //: Button
 
             Spacer()
@@ -50,7 +50,7 @@ struct NavigationBarView: View {
                 } label: {
                     Image(systemName: Constanst.SystemIconName.cart)
                         .font(.title)
-                        .foregroundColor(Resources.Colors.Text.navBarTextColor)
+                        .foregroundColor(Resources.Colors.Text.secondaryColor)
                 } //: Button
 
                 Circle()

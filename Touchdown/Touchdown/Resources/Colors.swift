@@ -17,7 +17,7 @@ extension Resources.Colors {
 
     struct Text {
         static let primaryColor = Color.gray
-        static let navBarTextColor = Color.black
-        static let logoTextColor = Color.black
+        static let secondaryColor = Color.black
+        static let tertiaryColor = Color.white
     }
 }
