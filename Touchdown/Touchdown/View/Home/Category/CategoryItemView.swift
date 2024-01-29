@@ -14,6 +14,7 @@ struct CategoryItemView: View {
         static let horizontalSpacing = 6.0
         static let categoryImageSize = 30.0
         static let backgroundCornerRadius = 12.0
+        static let strokeLineWidth = 1.0
     }
 
     let category: Category
@@ -46,7 +47,7 @@ struct CategoryItemView: View {
             .background(
                 RoundedRectangle(cornerRadius: VisualConstants.backgroundCornerRadius)
                     .stroke(Resources.Colors.Text.primaryColor,
-                            lineWidth: 1)
+                            lineWidth: VisualConstants.strokeLineWidth)
             )
         } //: Button
     }

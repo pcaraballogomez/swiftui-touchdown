@@ -10,28 +10,24 @@ import SwiftUI
 struct CategoryGridView: View {
 
     // MARK: - Properties
+    let categories: [Category]
+
     private struct VisualConstants {
         static let gridHeight = 140.0
         static let gridHorizontalPadding = 15.0
         static let gridVerticalPadding = 10.0
     }
 
-    private var gridLayout: [GridItem] = {
-        Array(repeating: GridItem(.flexible(),
-                                  spacing: Constanst.Layout.rowSpacing),
-              count: 2)
-    }()
-
     // MARK: - Body
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
-            LazyHGrid(rows: gridLayout,
+            LazyHGrid(rows: Constanst.Layout.gridLayout,
                       spacing: Constanst.Layout.columnSpacing) {
                 Section(
                     header: CateogrySectionView(rotateClockwise: false),
                     footer: CateogrySectionView(rotateClockwise: true)
                 ) {
-                    ForEach(Constanst.Data.categories) { category in
+                    ForEach(categories) { category in
                         CategoryItemView(category: category)
                     } //: ForEach
                 }
@@ -48,7 +44,7 @@ struct CategoryGridView: View {
 // MARK: - Preview
 struct CategoryGridView_Previews: PreviewProvider {
     static var previews: some View {
-        CategoryGridView()
+        CategoryGridView(categories: Constanst.Data.categories)
             .previewLayout(.device)
             .padding()
             .background(Resources.Colors.Background.primaryColor)

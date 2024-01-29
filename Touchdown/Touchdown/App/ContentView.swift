@@ -13,15 +13,7 @@ struct ContentView: View {
     private struct VisualConstants {
         static let featuredTabViewVerticalPadding = 20.0
         static let featuredTabViewAspectRatio = 1.475
-        static let productGridVerticalSpacing = 15.0
-        static let productGridPadding = 15.0
     }
-
-    private var gridLayout: [GridItem] = {
-        Array(repeating: GridItem(.flexible(),
-                                  spacing: Constanst.Layout.rowSpacing),
-              count: 2)
-    }()
 
     // MARK: - Body
     var body: some View {
@@ -36,23 +28,24 @@ struct ContentView: View {
 
             ScrollView(showsIndicators: false) {
                 VStack {
+                    // Featured
                     FeaturedTabView()
                         .padding(.vertical,
                                  VisualConstants.featuredTabViewVerticalPadding)
                         .frame(height: UIScreen.main.bounds.width / VisualConstants.featuredTabViewAspectRatio)
 
-                    CategoryGridView()
+                    // Categories
+                    CategoryGridView(categories: Constanst.Data.categories)
 
+                    // Products
                     TitleView(title: Resources.Strings.Category.helmetCategory)
+                    ProductGridView(products: Constanst.Data.products)
 
-                    LazyVGrid(columns: gridLayout,
-                              spacing: VisualConstants.productGridVerticalSpacing) {
-                        ForEach(Constanst.Data.products) { product in
-                            ProductItemView(product: product)
-                        } //: ForEach
-                    } //: LazyVGrid
-                    .padding(VisualConstants.productGridPadding)
-                    
+                    // Brands
+                    TitleView(title: Resources.Strings.Category.brandCategory)
+                    BrandGridView(brands: Constanst.Data.brands)
+
+                    // Footer
                     FooterView()
                         .padding(.horizontal)
                 } //: VStack
