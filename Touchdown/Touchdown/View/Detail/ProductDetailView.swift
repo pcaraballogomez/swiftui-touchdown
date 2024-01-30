@@ -14,8 +14,8 @@ struct ProductDetailView: View {
 
     private struct VisualConstants {
         static let verticalSpacing = 5.0
+        static let verticalPadding = 10.0
         static let ratingSizesViewTopPadding = -15.0
-        static let ratingSizesViewBottomPadding = 10.0
         static let detailBottomPartTopPadding = -105.0
     }
 
@@ -47,7 +47,7 @@ struct ProductDetailView: View {
                     // Ratings + Sizes
                     DetailRatingSizesView()
                         .padding(.top, VisualConstants.ratingSizesViewTopPadding)
-                        .padding(.bottom, VisualConstants.ratingSizesViewBottomPadding)
+                        .padding(.bottom, VisualConstants.verticalPadding)
 
                     // Description
                     ScrollView(showsIndicators: false) {
@@ -57,9 +57,13 @@ struct ProductDetailView: View {
                     } //: ScrollView
 
                     // Quantity + Favourite
+                    DetailQuantityFavouriteView()
+                        .padding(.vertical, VisualConstants.verticalPadding)
 
                     // Add to cart
-                    Spacer()
+                    DetailAddToCartView(product: product)
+                        .padding(.bottom, geometry.safeAreaInsets.bottom)
+                    
                 } //: VStack - Detail bottom part
                 .padding(.horizontal)
                 .background(

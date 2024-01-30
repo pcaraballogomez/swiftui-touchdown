@@ -30,5 +30,6 @@ extension Resources.Strings {
         static let priceTitle = "Price"
         static let ratingTitle = "Ratings"
         static let sizeTitle = "Sizes"
+        static let addToCartText = "Add to cart"
     }
 }

@@ -29,7 +29,10 @@ struct Constanst {
     struct SystemIconName {
         static let cart = "cart"
         static let chevronLeft = "chevron.left"
+        static let heartCircle = "heart.circle"
         static let magnifyingGlass = "magnifyingglass"
+        static let minusCircle = "minus.circle"
+        static let plusCircle = "plus.circle"
         static let starFill = "star.fill"
     }
 }
