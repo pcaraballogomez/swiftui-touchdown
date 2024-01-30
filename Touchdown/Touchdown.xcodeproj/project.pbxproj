@@ -50,6 +50,7 @@
 		F21C85C92B67FD66007063AB /* DetailSizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85C82B67FD66007063AB /* DetailSizeView.swift */; };
 		F21C85CB2B68C968007063AB /* DetailQuantityFavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85CA2B68C968007063AB /* DetailQuantityFavouriteView.swift */; };
 		F21C85CD2B68CC76007063AB /* DetailAddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85CC2B68CC76007063AB /* DetailAddToCartView.swift */; };
+		F2C1F4042B68D24B003EE259 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1F4032B68D24B003EE259 /* Shop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -98,6 +99,7 @@
 		F21C85C82B67FD66007063AB /* DetailSizeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSizeView.swift; sourceTree = "<group>"; };
 		F21C85CA2B68C968007063AB /* DetailQuantityFavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuantityFavouriteView.swift; sourceTree = "<group>"; };
 		F21C85CC2B68CC76007063AB /* DetailAddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddToCartView.swift; sourceTree = "<group>"; };
+		F2C1F4032B68D24B003EE259 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,6 +240,7 @@
 			children = (
 				F21C85822B62F0E4007063AB /* Constants.swift */,
 				F21C85972B63DCC4007063AB /* FileHelper.swift */,
+				F2C1F4032B68D24B003EE259 /* Shop.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				F21C85832B62F0E4007063AB /* Constants.swift in Sources */,
 				F21C85CB2B68C968007063AB /* DetailQuantityFavouriteView.swift in Sources */,
 				F21C85C92B67FD66007063AB /* DetailSizeView.swift in Sources */,
+				F2C1F4042B68D24B003EE259 /* Shop.swift in Sources */,
 				F21C85872B63848F007063AB /* NavigationBarView.swift in Sources */,
 				F21C85AA2B677508007063AB /* ProductModel.swift in Sources */,
 				F21C85A82B6773F7007063AB /* TitleView.swift in Sources */,

@@ -11,6 +11,7 @@ struct ProductGridView: View {
 
     // MARK: - Properties
     let products: [Product]
+    var onTap: ((Product) -> Void)?
 
     private struct VisualConstants {
         static let productGridVerticalSpacing = 15.0
@@ -23,6 +24,11 @@ struct ProductGridView: View {
                   spacing: VisualConstants.productGridVerticalSpacing) {
             ForEach(Constanst.Data.products) { product in
                 ProductItemView(product: product)
+                    .onTapGesture {
+                        withAnimation(.easeOut) {
+                            onTap?(product)
+                        }
+                    }
             } //: ForEach
         } //: LazyVGrid
         .padding(VisualConstants.productGridPadding)
