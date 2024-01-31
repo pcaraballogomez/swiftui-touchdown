@@ -39,8 +39,11 @@ struct NavigationBarView: View {
                         y: isAnimated ? .zero : VisualConstants.logoAnimationOffset)
                 .onAppear {
                     withAnimation(.easeOut(duration: VisualConstants.logoAnimationDuration)) {
-                        isAnimated.toggle()
+                        isAnimated = true
                     }
+                }
+                .onDisappear() {
+                    isAnimated = false
                 }
 
             Spacer()
