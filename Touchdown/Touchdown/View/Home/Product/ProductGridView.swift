@@ -7,37 +7,29 @@
 
 import SwiftUI
 
-struct ProductGridView: View {
+struct ProductGridView<Content: View>: View {
 
     // MARK: - Properties
     let products: [Product]
-    var onTap: ((Product) -> Void)?
-
-    private struct VisualConstants {
-        static let productGridVerticalSpacing = 15.0
-        static let productGridPadding = 15.0
-    }
+    let content: (Product) -> Content
 
     // MARK: - Body
     var body: some View {
         LazyVGrid(columns: Constanst.Layout.gridLayout,
-                  spacing: VisualConstants.productGridVerticalSpacing) {
+                  spacing: 15.0) {
             ForEach(Constanst.Data.products) { product in
-                ProductItemView(product: product)
-                    .onTapGesture {
-                        withAnimation(.easeOut) {
-                            onTap?(product)
-                        }
-                    }
+                content(product)
             } //: ForEach
         } //: LazyVGrid
-        .padding(VisualConstants.productGridPadding)
+        .padding(15.0)
     }
 }
 
 // MARK: - Preview
 struct ProductGridView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductGridView(products: Constanst.Data.products)
+        ProductGridView(products: Constanst.Data.products) { product in
+            ProductItemView(product: product)
+        }
     }
 }

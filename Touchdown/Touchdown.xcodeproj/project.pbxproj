@@ -40,7 +40,6 @@
 		F21C85B32B677ABE007063AB /* BrandGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85B22B677ABE007063AB /* BrandGridView.swift */; };
 		F21C85B62B677CA6007063AB /* ProductGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85B52B677CA6007063AB /* ProductGridView.swift */; };
 		F21C85B92B677F3C007063AB /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85B82B677F3C007063AB /* ProductDetailView.swift */; };
-		F21C85BB2B678041007063AB /* DetailNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85BA2B678041007063AB /* DetailNavigationBar.swift */; };
 		F21C85BD2B6781E0007063AB /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85BC2B6781E0007063AB /* UIApplicationExtension.swift */; };
 		F21C85BF2B67EF7A007063AB /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85BE2B67EF7A007063AB /* DetailHeaderView.swift */; };
 		F21C85C12B67F122007063AB /* DetailTopPartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85C02B67F122007063AB /* DetailTopPartView.swift */; };
@@ -51,6 +50,8 @@
 		F21C85CB2B68C968007063AB /* DetailQuantityFavouriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85CA2B68C968007063AB /* DetailQuantityFavouriteView.swift */; };
 		F21C85CD2B68CC76007063AB /* DetailAddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21C85CC2B68CC76007063AB /* DetailAddToCartView.swift */; };
 		F2C1F4042B68D24B003EE259 /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1F4032B68D24B003EE259 /* Shop.swift */; };
+		F2C1F4062B6A24D9003EE259 /* CustomBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1F4052B6A24D9003EE259 /* CustomBackButton.swift */; };
+		F2C1F4082B6A25A3003EE259 /* CartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C1F4072B6A25A3003EE259 /* CartButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,7 +90,6 @@
 		F21C85B22B677ABE007063AB /* BrandGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandGridView.swift; sourceTree = "<group>"; };
 		F21C85B52B677CA6007063AB /* ProductGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductGridView.swift; sourceTree = "<group>"; };
 		F21C85B82B677F3C007063AB /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
-		F21C85BA2B678041007063AB /* DetailNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNavigationBar.swift; sourceTree = "<group>"; };
 		F21C85BC2B6781E0007063AB /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		F21C85BE2B67EF7A007063AB /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
 		F21C85C02B67F122007063AB /* DetailTopPartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTopPartView.swift; sourceTree = "<group>"; };
@@ -100,6 +100,8 @@
 		F21C85CA2B68C968007063AB /* DetailQuantityFavouriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailQuantityFavouriteView.swift; sourceTree = "<group>"; };
 		F21C85CC2B68CC76007063AB /* DetailAddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAddToCartView.swift; sourceTree = "<group>"; };
 		F2C1F4032B68D24B003EE259 /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		F2C1F4052B6A24D9003EE259 /* CustomBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackButton.swift; sourceTree = "<group>"; };
+		F2C1F4072B6A25A3003EE259 /* CartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 			children = (
 				F21C857D2B62F03C007063AB /* Home */,
 				F21C857E2B62F099007063AB /* Detail */,
+				F2C1F4072B6A25A3003EE259 /* CartButtonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -202,7 +205,6 @@
 			isa = PBXGroup;
 			children = (
 				F21C85B82B677F3C007063AB /* ProductDetailView.swift */,
-				F21C85BA2B678041007063AB /* DetailNavigationBar.swift */,
 				F21C85BE2B67EF7A007063AB /* DetailHeaderView.swift */,
 				F21C85C02B67F122007063AB /* DetailTopPartView.swift */,
 				F21C85C22B67F6E0007063AB /* CustomShape.swift */,
@@ -211,6 +213,7 @@
 				F21C85C82B67FD66007063AB /* DetailSizeView.swift */,
 				F21C85CA2B68C968007063AB /* DetailQuantityFavouriteView.swift */,
 				F21C85CC2B68CC76007063AB /* DetailAddToCartView.swift */,
+				F2C1F4052B6A24D9003EE259 /* CustomBackButton.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2C1F4082B6A25A3003EE259 /* CartButtonView.swift in Sources */,
 				F21C85662B62EE0E007063AB /* ContentView.swift in Sources */,
 				F21C85942B63DC56007063AB /* PlayerModel.swift in Sources */,
 				F21C85922B6387A7007063AB /* Colors.swift in Sources */,
@@ -387,10 +391,10 @@
 				F21C85BF2B67EF7A007063AB /* DetailHeaderView.swift in Sources */,
 				F21C85642B62EE0E007063AB /* TouchdownApp.swift in Sources */,
 				F21C85BD2B6781E0007063AB /* UIApplicationExtension.swift in Sources */,
-				F21C85BB2B678041007063AB /* DetailNavigationBar.swift in Sources */,
 				F21C85C72B67FAE2007063AB /* DetailRatingView.swift in Sources */,
 				F21C85962B63DC81007063AB /* CodableBundleExtension.swift in Sources */,
 				F21C85B12B6779A7007063AB /* BrandItemView.swift in Sources */,
+				F2C1F4062B6A24D9003EE259 /* CustomBackButton.swift in Sources */,
 				F21C858E2B638797007063AB /* Images.swift in Sources */,
 				F21C859A2B63DE02007063AB /* FeaturedItemView.swift in Sources */,
 				F21C85C32B67F6E0007063AB /* CustomShape.swift in Sources */,

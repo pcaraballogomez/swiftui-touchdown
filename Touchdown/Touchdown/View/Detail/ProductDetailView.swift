@@ -15,68 +15,74 @@ struct ProductDetailView: View {
     private struct VisualConstants {
         static let verticalSpacing = 5.0
         static let verticalPadding = 10.0
+        static let headerTopPadding = 5.0
         static let ratingSizesViewTopPadding = -15.0
         static let detailBottomPartTopPadding = -105.0
+        static let addToCartBottomPadding = 20.0
     }
 
     // MARK: - Body
     var body: some View {
-        GeometryReader { geometry in
-            VStack(alignment: .leading,
-                   spacing: VisualConstants.verticalSpacing) {
+        VStack(alignment: .leading,
+               spacing: VisualConstants.verticalSpacing) {
 
-                // Navbar
-                DetailNavigationBar()
-                    .padding(.horizontal)
-                    .padding(.top, geometry.safeAreaInsets.top)
+            // Header
+            DetailHeaderView(header: Resources.Strings.Detail.header,
+                             title: product.name)
+            .padding(.horizontal)
+            .padding(.top, VisualConstants.headerTopPadding)
 
-                // Header
-                DetailHeaderView(header: Resources.Strings.Detail.header,
-                                 title: product.name)
-                    .padding(.horizontal)
+            // Detail top part
+            DetailTopPartView(title: Resources.Strings.Detail.priceTitle,
+                              text: product.formattedPrice,
+                              image: product.image)
+            .padding(.horizontal)
+            .zIndex(1)
 
-                // Detail top part
-                DetailTopPartView(title: Resources.Strings.Detail.priceTitle,
-                                  text: product.formattedPrice,
-                                  image: product.image)
-                    .padding(.horizontal)
-                    .zIndex(1)
+            // Detail bottom part
+            VStack {
+                // Ratings + Sizes
+                DetailRatingSizesView()
+                    .padding(.top, VisualConstants.ratingSizesViewTopPadding)
+                    .padding(.bottom, VisualConstants.verticalPadding)
 
-                // Detail bottom part
-                VStack {
-                    // Ratings + Sizes
-                    DetailRatingSizesView()
-                        .padding(.top, VisualConstants.ratingSizesViewTopPadding)
-                        .padding(.bottom, VisualConstants.verticalPadding)
+                // Description
+                ScrollView(showsIndicators: false) {
+                    Text(product.description)
+                        .font(.system(.body, design: .rounded))
+                        .foregroundColor(Resources.Colors.Text.primaryColor)
+                } //: ScrollView
 
-                    // Description
-                    ScrollView(showsIndicators: false) {
-                        Text(product.description)
-                            .font(.system(.body, design: .rounded))
-                            .foregroundColor(Resources.Colors.Text.primaryColor)
-                    } //: ScrollView
+                // Quantity + Favourite
+                DetailQuantityFavouriteView()
+                    .padding(.vertical, VisualConstants.verticalPadding)
 
-                    // Quantity + Favourite
-                    DetailQuantityFavouriteView()
-                        .padding(.vertical, VisualConstants.verticalPadding)
+                // Add to cart
+                DetailAddToCartView(product: product)
+                    .padding(.bottom, VisualConstants.addToCartBottomPadding)
 
-                    // Add to cart
-                    DetailAddToCartView(product: product)
-                        .padding(.bottom, geometry.safeAreaInsets.bottom)
-                    
-                } //: VStack - Detail bottom part
-                .padding(.horizontal)
-                .background(
-                    Resources.Colors.Background.secondaryColor
-                        .clipShape(CustomShape())
-                        .padding(.top, VisualConstants.detailBottomPartTopPadding)
-                )
-            } //: VStack
-            .zIndex(0)
-            .ignoresSafeArea()
-            .background(product.backgroundColor)
-            .ignoresSafeArea()
-        } //: GeometryReader
+            } //: VStack - Detail bottom part
+            .padding(.horizontal)
+            .background(
+                Resources.Colors.Background.secondaryColor
+                    .clipShape(CustomShape())
+                    .padding(.top, VisualConstants.detailBottomPartTopPadding)
+            )
+        } //: VStack
+               .zIndex(0)
+               .background(product.backgroundColor)
+               .edgesIgnoringSafeArea(.bottom)
+               .navigationBarBackButtonHidden()
+               .toolbar {
+                   ToolbarItem(placement: .navigationBarLeading) {
+                       CustomBackButton()
+                           .frame(height: Constanst.Size.iconHeight)
+                   }
+                   ToolbarItem(placement: .navigationBarTrailing) {
+                       CartButtonView()
+                           .frame(height: Constanst.Size.iconHeight)
+                   }
+               }
     }
 }
 

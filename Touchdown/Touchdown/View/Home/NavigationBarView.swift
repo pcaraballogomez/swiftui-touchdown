@@ -24,7 +24,7 @@ struct NavigationBarView: View {
     var body: some View {
         HStack {
             Button {
-
+                // TODO: Implement
             } label: {
                 Image(systemName: Constanst.SystemIconName.magnifyingGlass)
                     .font(.title)
@@ -47,7 +47,7 @@ struct NavigationBarView: View {
 
             ZStack {
                 Button {
-
+                    // TODO: Implement
                 } label: {
                     Image(systemName: Constanst.SystemIconName.cart)
                         .font(.title)

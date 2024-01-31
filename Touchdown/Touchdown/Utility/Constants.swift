@@ -25,6 +25,11 @@ struct Constanst {
         static let gridLayout: [GridItem] = Array(repeating: Constanst.Layout.gridItem, count: 2)
     }
 
+    // MARK: - Size
+    struct Size {
+        static let iconHeight = 31.0
+    }
+
     // MARK: - SystemIconName
     struct SystemIconName {
         static let cart = "cart"
